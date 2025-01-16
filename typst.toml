@@ -1,0 +1,16 @@
+[package]
+name = "metropolis-polylux"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Andreas Kröpelin", "Enivex"]
+license = "MIT"
+description = "Metropolis style template for Polylux"
+homepage = "https://github.com/polylux-typ/metropolis"
+repository = "https://github.com/polylux-typ/metropolis"
+keywords = ["metropolis", "polylux", "presentation"]
+categories = ["presentation"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+# thumbnail = "thumbnail.webp"
