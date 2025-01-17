@@ -16,6 +16,7 @@
 )
 #set strong(delta: 100)
 #show math.equation: set text(font: "Fira Math")
+#show raw: set text(font: "Fira Code")
 #set align(horizon)
 #show emph: it => text(fill: metropolis.bright, it.body)
 
@@ -56,6 +57,8 @@
   $
     integral_a^b f(x) dif x = F(b) - F(a)
   $
+
+  See `https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus`
 ]
 
 #slide[
