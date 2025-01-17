@@ -7,8 +7,18 @@ A template for creating presentation slides with Typst and
 
 Use via
 ```sh
-typst init @preview/metropolis-polylux:0.2.2 your-cool-project
+typst init @preview/metropolis-polylux:0.1.0 your-cool-project
 ```
 
+A `slides.typ` file will be created for you and contains all the design elements
+you can use.
+
 ![thumbnail](thumbnail.png)
+
+
+## About
+
+This theme is inspired by https://github.com/matze/mtheme
+
+The Polylux-port was originally performed by https://github.com/Enivex
 
