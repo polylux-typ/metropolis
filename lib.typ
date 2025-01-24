@@ -6,12 +6,16 @@
 #let bright = rgb("#eb811b")
 #let brighter = rgb("#d6c6b7")
 
-#let header(title) = {
-  context if title != none {
-    show: toolbox.full-width-block.with(fill: text.fill, inset: 1em)
-    set align(horizon)
-    set text(fill: page.fill, size: 1.2em)
-    strong(title)
+#let slide-title-header = context {
+  let hs = query(heading.where(level: 1).after(here()))
+  if hs.len() > 0 {
+    let h = hs.first().body
+    if h != [] {
+      show: toolbox.full-width-block.with(fill: text.fill, inset: 1em)
+      set align(horizon)
+      set text(fill: page.fill, size: 1.0em)
+      strong(h)
+    }
   }
 }
 
