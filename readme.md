@@ -13,7 +13,11 @@ typst init @preview/metropolis-polylux:0.1.0 your-cool-project
 A `slides.typ` file will be created for you and contains all the design elements
 you can use.
 
-By default, it uses the fonts Fira Sans, Fira Math, and Fira Code.
+By default, it uses the fonts
+[Fira Sans](https://bboxtype.com/typefaces/FiraSans),
+[Fira Math](https://github.com/firamath/firamath/releases),
+and
+[Fira Code](https://github.com/tonsky/FiraCode/releases).
 Either make sure you have them installed or specify other fonts in the template.
 
 ![thumbnail](thumbnail.png)
