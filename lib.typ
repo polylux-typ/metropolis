@@ -8,14 +8,7 @@
 
 #let header(title) = {
   context if title != none {
-    let margin = if type(page.margin) == dictionary {
-      page.margin
-    } else {
-      (left: page.margin, right: page.margin)
-    }
-    let margin-x = margin.left + margin.right
-    show: move.with(dx: -margin.left)
-    show: block.with(width: 100% + margin-x, fill: text.fill, inset: 1em)
+    show: toolbox.full-width-block.with(fill: text.fill, inset: 1em)
     set align(horizon)
     set text(fill: page.fill, size: 1.2em)
     strong(title)
@@ -28,12 +21,14 @@
   set align(bottom)
   context text(fill: text.fill.lighten(40%), content)
   h(1fr)
-  context { logic.logical-slide.display() }
+  toolbox.slide-number
 }
 
-#let outline = utils.polylux-outline(enum-args: (tight: false,))
+#let outline = toolbox.all-sections((sections, _current) => {
+  enum(tight: false, ..sections)
+})
 
-#let progress-bar = utils.polylux-progress( ratio => {
+#let progress-bar = toolbox.progress-ratio( ratio => {
   set grid.cell(inset: (y: .03em))
   grid(
     columns: (ratio * 100%, 1fr),
@@ -48,7 +43,7 @@
 }
 
 #let new-section(name) = {
-  utils.register-section(name)
+  toolbox.register-section(name)
   set page(header: none, footer: none)
   show: pad.with(20%)
   set text(size: 1.5em)
