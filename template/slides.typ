@@ -64,9 +64,7 @@
 ]
 
 #slide[
-  =
-
-  slide without a header (note the empty `= `)
+  slide without a title
 ]
 
 #slide[
