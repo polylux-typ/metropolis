@@ -1,5 +1,5 @@
 #import "@preview/polylux:0.4.0": *
-#import "@local/metropolis-polylux:0.1.0" as metropolis
+#import "@preview/metropolis-polylux:0.1.0" as metropolis
 #import metropolis: new-section, focus
 
 #show: metropolis.setup
