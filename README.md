@@ -13,7 +13,10 @@ typst init @preview/metropolis-polylux:0.1.0 your-cool-project
 A `slides.typ` file will be created for you that you can directly edit and get
 going.
 
-At the top, you will find the line
+![thumbnail](thumbnail.png)
+
+
+At the top of the gnerated `slides.typ`, you will find the line
 ```typ
 #show: metropolis.setup
 ```
@@ -50,9 +53,6 @@ By default, the template uses the fonts
 and
 [Fira Code](https://github.com/tonsky/FiraCode/releases).
 Either make sure you have them installed or specify other fonts in the template.
-
-![thumbnail](thumbnail.png)
-
 
 ## About
 
