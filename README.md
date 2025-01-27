@@ -5,16 +5,16 @@
 A template for creating presentation slides with Typst and
 [Polylux](https://github.com/polylux-typ/polylux/).
 
+![thumbnail](thumbnail.png)
+
+
 Use via
 ```sh
-typst init @preview/metropolis-polylux:0.1.0 your-cool-project
+typst init @preview/metropolis-polylux your-cool-project
 ```
 
 A `slides.typ` file will be created for you that you can directly edit and get
 going.
-
-![thumbnail](thumbnail.png)
-
 
 At the top of the gnerated `slides.typ`, you will find the line
 ```typ
