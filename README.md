@@ -10,10 +10,41 @@ Use via
 typst init @preview/metropolis-polylux:0.1.0 your-cool-project
 ```
 
-A `slides.typ` file will be created for you and contains all the design elements
-you can use.
+A `slides.typ` file will be created for you that you can directly edit and get
+going.
 
-By default, it uses the fonts
+At the top, you will find the line
+```typ
+#show: metropolis.setup
+```
+which you can edit to configure the template with the following options:
+```typ
+#show: metropolis.setup.with(
+  text-font: "Fira Sans",
+  math-font: "Fira Math",
+  code-font: "Fira Code",
+  text-size: 23pt,
+  footer: [My cool footer], // defaults to none
+)
+```
+All of them are optional and the default values are shown above.
+
+## Special syntax
+
+Most of the template should be self explanatory but two things might be a bit
+surprising:
+
+Slide titles are created using level-one headings (`= A Slide Title`).
+Headings of other levels are not affected.
+A slide without such a level-one heading will not have a title.
+
+Emphasized text (created like `_this_`) is not shown in italics but in a bright
+color (in the original LaTeX version of Metropolis, you would use `\alert` for
+this).
+
+## Fonts
+
+By default, the template uses the fonts
 [Fira Sans](https://bboxtype.com/typefaces/FiraSans),
 [Fira Math](https://github.com/firamath/firamath/releases),
 and
