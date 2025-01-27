@@ -1,26 +1,8 @@
-#import "@local/polylux:0.4.0": *
+#import "@preview/polylux:0.4.0": *
 #import "@local/metropolis-polylux:0.1.0" as metropolis
-#import metropolis: title, new-section, focus
+#import metropolis: new-section, focus
 
-#set page(
-  paper: "presentation-16-9",
-  fill: white.darken(2%),
-  margin: (top: 3em, rest: 1em),
-  footer: metropolis.footer[My footer],
-  header: metropolis.slide-title-header,
-)
-#set text(
-  font: "Fira Sans",
-  // weight: "light", // looks nice but does not match Fira Math
-  size: 23pt,
-  fill: rgb("#23373b"), // dark teal
-)
-#set strong(delta: 100)
-#show math.equation: set text(font: "Fira Math")
-#show raw: set text(font: "Fira Code")
-#set align(horizon)
-#show emph: it => text(fill: metropolis.bright, it.body)
-#show heading.where(level: 1): _ => none
+#show: metropolis.setup
 
 #slide[
   #set page(header: none, footer: none, margin: 3em)
@@ -48,9 +30,7 @@
   #metropolis.outline
 ]
 
-#slide[
-  #new-section[My first section]
-]
+#new-section[My first section]
 
 #slide[
   = The Fundamental Theorem of Calculus
@@ -67,9 +47,7 @@
   slide without a title
 ]
 
-#slide[
-  #new-section[My second section]
-]
+#new-section[My second section]
 
 #slide[
   = Heron algorithm

@@ -13,7 +13,7 @@
   strong(h)
 })
 
-#let footer(content) = {
+#let the-footer(content) = {
   set text(size: 0.8em)
   show: pad.with(.5em)
   set align(bottom)
@@ -35,19 +35,14 @@
   )
 })
 
-#let title(the-title) = body => {
-  set page( header: header(the-title) )
-  body
-}
-
-#let new-section(name) = {
-  toolbox.register-section(name)
+#let new-section(name) = slide({
   set page(header: none, footer: none)
   show: pad.with(20%)
   set text(size: 1.5em)
   name
+  toolbox.register-section(name)
   progress-bar
-}
+})
 
 #let focus(body) = context {
   set page(header: none, footer: none, fill: text.fill, margin: 2em)
@@ -57,4 +52,35 @@
 }
 
 #let divider = line(length: 100%, stroke: .1em + bright)
+
+#let setup(
+  footer: none,
+  text-font: "Fira Sans",
+  math-font: "Fira Math",
+  code-font: "Fira Code",
+  text-size: 23pt,
+  body,
+) = {
+  set page(
+    paper: "presentation-16-9",
+    fill: white.darken(2%),
+    margin: (top: 3em, rest: 1em),
+    footer: the-footer(footer),
+    header: slide-title-header,
+  )
+  set text(
+    font: text-font,
+    // weight: "light", // looks nice but does not match Fira Math
+    size: text-size,
+    fill: rgb("#23373b"), // dark teal
+  )
+  set strong(delta: 100)
+  show math.equation: set text(font: math-font)
+  show raw: set text(font: code-font)
+  set align(horizon)
+  show emph: it => text(fill: bright, it.body)
+  show heading.where(level: 1): _ => none
+
+  body
+}
 
