@@ -16,7 +16,7 @@ typst init @preview/metropolis-polylux your-cool-project
 A `slides.typ` file will be created for you that you can directly edit and get
 going.
 
-At the top of the gnerated `slides.typ`, you will find the line
+At the top of the generated `slides.typ`, you will find the line
 ```typ
 #show: metropolis.setup
 ```
